@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> Rabbit, wait! </title>
+	<link rel="stylesheet" href="game.css"/>
+	<script src="astar.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<canvas id="field" width="0" height="0"></canvas>	
+	<form id="settings">		
+		<p><label> Розмірність сітки <input name="forestSize" value="20"> </label><p>
+		<p><label> Максимальна к-ть дерев <input name="treesMaxNumb" value="40"> </label><p>
+		<p><label> Максимальна к-ть кущів <input name="bushesMaxNumb" value="30"> </label><p>
+		<p><label> Тривалість життя дерева <input name="treeLifeDur" value="4"> </label><p>
+		<p><label> Тривалість життя куща <input name="bushLifeDur" value="3"> </label><p>
+		<p><label> Швидкість вовка (кліт./хід) <input name="wolfStepsPerMove" value="3"> </label><p>
+		<p><label> Швидкість зайця (кліт./хід) <input name="rabbitStepsPerMove" value="3"> </label><p>
+		<p><label> Тривалість ходу <input name="moveTime" value="0.5"> </label><p>
+		<p><label> Максимальна к-ть ходів <input name="moves" value="5"> </label><p>
+		<button id="startButton" type="button">СТАРТ</button>
+	</form>	
+	<script>
+		var CANVAS = document.getElementById("field"),
+			FORM = document.getElementById("settings"),
+			START = document.getElementById("startButton"),
+			SETTINGS = {};
+			
+		VIEW = VIEW(CANVAS);
+		
+		START.onclick = function () {
+			var settings = FORM.elements;
+			SETTINGS.forestSize = settings["forestSize"].value;
+			SETTINGS.treesMaxNumb = settings["treesMaxNumb"].value;
+			SETTINGS.bushesMaxNumb = settings["bushesMaxNumb"].value;
+			SETTINGS.treeLifeDur = settings["treeLifeDur"].value;
+			SETTINGS.bushLifeDur = settings["bushLifeDur"].value;
+			SETTINGS.wolfStepsPerMove = settings["wolfStepsPerMove"].value;
+			SETTINGS.rabbitStepsPerMove = settings["rabbitStepsPerMove"].value;
+			SETTINGS.moveTime = settings["moveTime"].value * 1000;
+			SETTINGS.moves = settings["moves"].value;			
+			
+			CONTROLLER(SETTINGS).startGame();			
+		};		
+	</script>
+</body>
+</html>
