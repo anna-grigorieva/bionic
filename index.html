@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rabbit, wait! </title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/astar.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+<body>
+    <h2>RABBIT HUNT</h2>
+    <div class="col col-sm">
+        <form id="settings">
+            <h3>GAME SETTINGS</h3>
+            <hr />
+            <p>Forest size<input name="forestSize" value="25" /></p>
+            <p>Max number of trees<input name="treesMaxNumb" value="50" /></p>
+            <p>Max number of bushes<input name="bushesMaxNumb" value="35" /></p>
+            <p>Tree's lifetime<input name="treeLifeDur" value="4" /></p>
+            <p>Bush's lifetime<input name="bushLifeDur" value="3" /></p>
+            <p>Wolf's speed (steps per move)<input name="wolfStepsPerMove" value="3" /></p>
+            <p>Rabbit's speed (steps per move)<input name="rabbitStepsPerMove" value="3" /></p>
+            <p>Move duration (s)<input name="moveTime" value="0.8" /></p>
+            <p>Max number of moves<input name="moves" value="10" /></p>
+            <button id="startButton" type="button">PLAY</button>
+        </form>
+    </div>
+    <div class="col col-lg">
+        <canvas id="field" width="0" height="0"></canvas>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #423636;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+
+h2 {
+    color: #c7e4d4;
+    text-align: center;
+}
+
+#field {
+    max-width: 500px;
+    width: 64%;
+    margin: 30px 18% 0 18%;
+}
+
+#settings {
+    overflow: hidden;
+    min-width: 300px;
+    color: whitesmoke;
+    width: 80%;
+    margin: 30px 10% 0 10%;
+}
+
+input {
+    border-radius: 3px;
+    width: 25%;
+    text-align: center;
+    float: right;
+}
+#startButton {
+    width: 20%;
+    margin: 30px 40% 0 40%;
+}
+
+.col {
+    float: left;
+    height: 86%;
+    overflow: auto;
+}
+
+.col.col-sm {
+    width: 40%;
+    background-color: #708073;
+}
+
+.col.col-lg {
+    width: 60%;
+    background-color: #c7e4d4;
+}
